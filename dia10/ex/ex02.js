@@ -1,23 +1,16 @@
-let tamanhoArray = Number(prompt('Qual o tamanho da lista?'))
-let lista = [];
-lista.length = tamanhoArray;
-let contador = 0;
-let indice;
-let continuar = true;
+let array = [];
+let arrayInvertido = [];
+let quantidade = Number(prompt('Digite a quantidade de números para inserir no array'));
 
-while(continuar){
-    indice = prompt('Adicione um número');
-    lista[contador] = indice;
-    contador++
-    if(indice == tamanhoArray){
-        continuar = false;
-    }
- }
- 
- for(let i = tamanhoArray; i == lista.length && i > 0; i--){
-     console.log(lista.reverse());
- }
+for(let i = 0; i < quantidade; i++){
+    let numero = Number(prompt('Digite o ' + (i + 1) + '° número'));
+    array[i] = numero;
+}
+console.log("Array original: " + array);
 
- for(let i = 0; i < lista.length; i++){
-    console.log(lista);
- }
+let contador = quantidade - 1;
+for(let i = 0; i < 5; i++){
+    arrayInvertido[i] = array[contador]
+    contador--
+}
+console.log('Array invertido: ' + arrayInvertido);
