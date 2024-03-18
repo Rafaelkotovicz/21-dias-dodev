@@ -5,6 +5,8 @@ class Computador{
     armazenamento
     memoriaRam
     ssd
+    
+    
     constructor(tipo, processador, video, armazenamento, memoriaRam, ssd){
         this.tipo = tipo
         this.processador = processador
@@ -13,7 +15,11 @@ class Computador{
         this.memoriaRam = memoriaRam
         this.ssd = ssd
     }
+
+    exibirInformacoes(){
+        console.log(this.tipo, this.processador, this.video, this.armazenamento, this.memoriaRam, this.ssd);
+    }
 }
 
 let meuPc = new Computador("notebook", "i5", "integrada", 256, 8, true);
-console.log(meuPc);
+meuPc.exibirInformacoes();

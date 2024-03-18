@@ -3,6 +3,7 @@ class Carro{
     potencia
     velocidadeMaxima
     aceleracao
+    
     constructor(nome, potencia, velocidadeMaxima, aceleracao){
         this.nome = nome
         this.potencia = potencia
